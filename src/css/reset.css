@@ -1,25 +1,28 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-p {
-  margin: 0;
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
 }
 
-p:last-child {
-  margin-bottom: 0;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
+ul li {
   list-style: none;
 }
 
 a {
-  color: currentColor;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -28,7 +31,18 @@ button {
 }
 
 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+  vertical-align: top;
+}
+
+a,
+*::before,
+*::after {
+  display: inline-block;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 2rem; 
+  line-height: 1;
 }

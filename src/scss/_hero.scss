@@ -1,0 +1,97 @@
+.page {
+    // .page__hero
+    &__hero {
+    }
+}
+.hero {
+    position: relative;
+    color: $color-text-secondary;
+
+    // dark overlay
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        opacity: 0.6;
+    }
+
+    // .hero__container
+    &__container {
+        min-height: 100svh;
+        position: relative;
+        z-index: 3;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // row-gap: 128px;
+        // 128px(gap) / 824px(hight of hero)
+        row-gap: 15.533981svh; /* 128/824 */
+    }
+    // .hero__menu
+    &__menu {
+    }
+    // .hero__content
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1.25rem;
+    }
+    // .hero__title
+    &__title {
+        color: $color-text-secondary;
+        font-family: "Bodoni 72";
+        font-size: 6rem;
+        line-height: 7.1875rem;
+    }
+    // .hero__text
+    &__text {
+        font-size: 1.5rem;
+        letter-spacing: 3.6px;
+        text-transform: uppercase;
+    }
+    // .hero__link
+    &__link {
+    }
+    // .hero__bg
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // row-gap: 32px;
+    row-gap: 3.883495svh; /* 32/824 */
+
+    // .menu__logo
+    &__logo {
+    }
+
+    // .menu__list
+    &__list {
+        display: flex;
+        gap: 16px;
+    }
+    // .menu__item
+    &__item {
+    }
+    // .menu__link
+    &__link {
+        color: $color-text-secondary;
+        line-height: 1.25; /* 20/16 */
+    }
+}

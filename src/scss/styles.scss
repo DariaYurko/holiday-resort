@@ -5,13 +5,19 @@
   |============================
 */
 
+
+// --------- Сonnecting fonts ------------------
+@import './fonts';
+
 // --------- Сonnecting variables --------------
 @import "./variables.scss";
 
 @import url("/css/reset.css");
-@import url("/css/base.css");
 @import url("/css/container.css");
+@import './base';
+@import './components';
 
 // --------- Сonnecting partials styles --------
-@import "./header.scss";
-@import "./footer.scss";
+@import "./header";
+@import "./hero";
+@import "./footer";
