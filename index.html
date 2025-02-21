@@ -8,38 +8,19 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
   <title>Holiday Resort</title>
   <script type="module" crossorigin src="/holiday-resort/index.js"></script>
-  <link rel="stylesheet" crossorigin href="/holiday-resort/assets/index-CtA_swxH.css">
+  <link rel="stylesheet" crossorigin href="/holiday-resort/assets/index-C5B2mSaL.css">
 </head>
 
 <body>
-  <!-- <header class="header">
-  <div class="header__container">
-    <img class="header__logo" src="../img/logo/logo.svg" alt="Logotype">
-    <nav class="header__menu menu">
-      <ul class="menu__list">
-        <li class="menu__item">
-          <a href="#" class="menu__link">Strona Główna</a>
-        </li>
-        <li class="menu__item">
-          <a href="#" class="menu__link">O nas</a>
-        </li>
-        <li class="menu__item">
-          <a href="#" class="menu__link">Atrakcje</a>
-        </li>
-        <li class="menu__item">
-          <a href="#" class="menu__link">Udogodnenia</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header> -->
-
-  <main class="page">
-    <!-- Loads the specified .html file -->
-    <section class="page__hero hero">
+  <div class="wrapper"> 
+    <main class="page">
+      <!-- Loads the specified .html file -->
+      <section class="page__hero hero">
     <div class="hero__container">
         <nav class="hero__menu menu">
-            <img class="menu__logo" src="../img/logo/logo.svg" alt="Logotype">
+            <a href="index.html" class="menu__logo logo">
+                <img class="logo__img" src="../img/logo/logo.svg" alt="Logotype">
+            </a>
             <ul class="menu__list">
                 <li class="menu__item">
                     <a href="#" class="menu__link">Strona Główna</a>
@@ -59,28 +40,31 @@
         <div class="hero__content">
             <h1 class="hero__title title">MIÓD MALINA</h1>
             <p class="hero__text">OSADA ISTEBNA</p>
-            <a href="#" class="hero__link link">ZOBACZ WIĘCEJ</a>
+            <a href="#" class="hero__button button">ZOBACZ WIĘCEJ</a>
         </div>
-
     </div>
+
     <img class="hero__bg" src="../img/hero/bg.jpg" alt="Backgound image">
 </section>
-    <section class="page__about about">
+      <section class="page__about about">
     <div class="about__container">
-        <h2 class="about__title section-title">O NAS</h2>
-        <h3 class="about__subtitle section-subtitle">TROCHĘ O NAS, DOMKACH I NASZEJ OSADZIE</h3>
+        <div class="about__header header-block">
+            <h2 class="header-block__title section-title">O NAS</h2>
+            <h3 class="header-block__subtitle section-subtitle">TROCHĘ O NAS, DOMKACH I NASZEJ OSADZIE</h3>
+        </div>
         <p class="about__text">Osada Miód Malina powstała w 2023 roku. Do dyspozycji naszych gości mamy obecnie 4 domy, których wynajem uruchomiliśmy na koniec 2023 roku. Osada jest całkowicie nowa i czeka aby ugościć i rozpieścić swoich gości..</p>
-        <a href="#" class="about__link link">CZYTAJ DALEJ</a>
+        <a href="#" class="about__button button">CZYTAJ DALEJ</a>
     </div>
 </section>
-  </main>
-
-  <footer class="footer">
+    </main>
+  
+    <footer class="footer">
   <div class="footer__container">
     FOOTER
   </div>
 </footer>
 
+  </div>
 
 </body>
 
