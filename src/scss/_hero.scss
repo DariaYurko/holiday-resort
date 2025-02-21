@@ -1,6 +1,7 @@
 .page {
     // .page__hero
     &__hero {
+        padding-block: 7.76699svh; /* 64/824 */
     }
 }
 .hero {
@@ -23,15 +24,16 @@
     // .hero__container
     &__container {
         min-height: 100svh;
-        position: relative;
-        z-index: 3;
+        text-align: center;
 
         display: flex;
         flex-direction: column;
         align-items: center;
-        // row-gap: 128px;
         // 128px(gap) / 824px(hight of hero)
         row-gap: 15.533981svh; /* 128/824 */
+
+        position: relative;
+        z-index: 3;
     }
     // .hero__menu
     &__menu {
@@ -49,16 +51,27 @@
         font-family: "Bodoni 72";
         font-size: 6rem;
         line-height: 7.1875rem;
+        text-transform: uppercase;
+
+        @media only screen and (max-width: 767.98px) {
+            font-size: 3rem;
+            line-height: 3rem;
+        }
     }
     // .hero__text
     &__text {
         font-size: 1.5rem;
-        letter-spacing: 3.6px;
+        letter-spacing: 0.225rem;
         text-transform: uppercase;
+
+        @media only screen and (max-width: 767.98px) {
+            font-size: 1rem;
+        }
     }
-    // .hero__link
-    &__link {
+    // .hero__button
+    &__button {
     }
+
     // .hero__bg
     &__bg {
         position: absolute;
@@ -74,17 +87,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // row-gap: 32px;
     row-gap: 3.883495svh; /* 32/824 */
 
     // .menu__logo
     &__logo {
+        transition: transform 150ms ease-in;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        @media only screen and (max-width: 767.98px) {
+            transform: scale(0.7);
+        }
     }
 
     // .menu__list
     &__list {
         display: flex;
+        justify-content: center;
         gap: 16px;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width: 767.98px) {
+            gap: 25px;
+        }
     }
     // .menu__item
     &__item {
@@ -92,6 +119,20 @@
     // .menu__link
     &__link {
         color: $color-text-secondary;
-        line-height: 1.25; /* 20/16 */
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        @media only screen and (max-width: 767.98px) {
+            font-size: 20px;
+        }
+    }
+}
+
+
+.logo {
+    // .logo__img
+    &__img {
     }
 }

@@ -30,32 +30,86 @@
 }
 body {
   font-family: "Source Sans Pro", sans-serif;
+  line-height: 1.25rem;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
 }
 
 [class*=page__] {
   padding-block: 4rem;
 }
+@media screen and (max-width: 767.98px) {
+  [class*=page__] {
+    padding-block: 2rem;
+  }
+}
 
-.link {
+.button {
   display: inline-block;
+  color: #f4f4f4;
+  text-transform: uppercase;
   text-align: center;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  line-height: 1.25; /* 20/16 */
+  line-height: 1.25rem;
   background-color: #d8ae5e;
-  -webkit-transition: background-color 0.3s ease-in;
-  transition: background-color 0.3s ease-in;
+  -webkit-transition: background-color 150ms ease-in;
+  transition: background-color 150ms ease-in;
 }
-
 @media (any-hover: hover) {
-  .link:hover {
+  .button:hover {
     background-color: #a18146;
   }
 }
-/**
-*
-*
-*--------- Сonnecting HEADER styles --------*/
+
+.header-block {
+  text-align: center;
+}
+.header-block__title:not(:last-child) {
+  margin-bottom: 8px;
+}
+.header-block::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  background-color: #d8ae5e;
+  margin-top: 32px;
+}
+@media only screen and (max-width: 767.98px) {
+  .header-block::after {
+    margin-top: 15px;
+  }
+}
+
+.section-title {
+  font-family: "Bodoni 72";
+  font-size: 64px;
+  text-transform: uppercase;
+  line-height: 120.3125%; /* 77/64 */
+}
+@media only screen and (max-width: 767.98px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+.section-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+@media only screen and (max-width: 767.98px) {
+  .section-subtitle {
+    font-size: 0.8rem;
+  }
+}
+
+.page__hero {
+  padding-block: 7.76699svh; /* 64/824 */
+}
+
 .hero {
   position: relative;
   color: #ffffff;
@@ -73,8 +127,7 @@ body {
 }
 .hero__container {
   min-height: 100svh;
-  position: relative;
-  z-index: 3;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,6 +139,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   row-gap: 15.533981svh; /* 128/824 */
+  position: relative;
+  z-index: 3;
 }
 .hero__content {
   display: -webkit-box;
@@ -105,11 +160,23 @@ body {
   font-family: "Bodoni 72";
   font-size: 6rem;
   line-height: 7.1875rem;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767.98px) {
+  .hero__title {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
 }
 .hero__text {
   font-size: 1.5rem;
-  letter-spacing: 3.6px;
+  letter-spacing: 0.225rem;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 767.98px) {
+  .hero__text {
+    font-size: 1rem;
+  }
 }
 .hero__bg {
   position: absolute;
@@ -135,17 +202,79 @@ body {
           align-items: center;
   row-gap: 3.883495svh; /* 32/824 */
 }
+.menu__logo {
+  -webkit-transition: -webkit-transform 150ms ease-in;
+  transition: -webkit-transform 150ms ease-in;
+  transition: transform 150ms ease-in;
+  transition: transform 150ms ease-in, -webkit-transform 150ms ease-in;
+}
+.menu__logo:hover {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+@media only screen and (max-width: 767.98px) {
+  .menu__logo {
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
 .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 16px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media only screen and (max-width: 767.98px) {
+  .menu__list {
+    gap: 25px;
+  }
 }
 .menu__link {
   color: #ffffff;
-  line-height: 1.25; /* 20/16 */
+}
+.menu__link:hover {
+  text-decoration: underline;
+}
+@media only screen and (max-width: 767.98px) {
+  .menu__link {
+    font-size: 20px;
+  }
 }
 
+.about {
+  text-align: center;
+}
+.about__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 32px;
+}
+.about__text {
+  max-width: 598px;
+  font-size: 20px;
+  line-height: 1.5; /* 30px */
+  letter-spacing: 1px;
+}
+@media only screen and (max-width: 767.98px) {
+  .about__text {
+    font-size: 16px;
+  }
+}
 /**
 *
 *

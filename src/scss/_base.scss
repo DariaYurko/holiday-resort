@@ -1,7 +1,17 @@
 body {
     font-family: "Source Sans Pro", sans-serif;
+    line-height: 1.25rem;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
 }
 
 [class*="page__"] {
     padding-block: 4rem;
+
+    @media screen and (max-width: 767.98px){
+        padding-block: 2rem;
+    }
 }

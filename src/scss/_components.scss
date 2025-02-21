@@ -1,15 +1,62 @@
-.link {
+.button {
     display: inline-block;
+    color: $link-text-color;
+    text-transform: uppercase;
     text-align: center;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
-    line-height: 1.25; /* 20/16 */
+    line-height: 1.25rem;
     background-color: $accent-color;
-    transition: background-color 0.3s ease-in;
-}
+    transition: background-color 150ms ease-in;
 
-@media (any-hover:hover) {
-    .link:hover {
-        background-color: #a18146;
+    &:hover {
+        @media (any-hover: hover) {
+            background-color: #a18146;
+        }
     }
 }
+// -------------------------------------
+.header-block {
+    text-align: center;
+
+    // .header-block__title
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+    // .header-block__subtitle
+    &__subtitle {
+    }
+
+    &::after {
+        content: "";
+        width: 120px;
+        height: 1px;
+        background-color: $accent-color;
+        margin-top: 32px;
+
+        @media only screen and (max-width: 767.98px) {
+            margin-top: 15px;
+        }
+    }
+}
+.section-title {
+    font-family: "Bodoni 72";
+    font-size: 64px;
+    text-transform: uppercase;
+    line-height: 120.3125%; /* 77/64 */
+
+    @media only screen and (max-width: 767.98px) {
+        font-size: 2.5rem;
+    }
+}
+.section-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+
+    @media only screen and (max-width: 767.98px) {
+        font-size: 0.8rem;
+    }
+}
+// -------------------------------------
