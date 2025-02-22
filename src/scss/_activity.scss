@@ -1,0 +1,111 @@
+.page {
+    // .page__activity
+    &__activity {
+    }
+}
+
+.activity {
+    // .activity__container
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 4rem;
+
+        @media only screen and (max-width: 768.98px) {
+            row-gap: 3rem;
+        }
+
+        @media only screen and (max-width: 424.98px) {
+            row-gap: 2rem;
+        }
+    }
+    // .activity__header
+    &__header {
+    }
+    // .activity__list
+    &__list {
+        align-self: stretch;
+        max-width: 930px;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 128px;
+        row-gap: 96px;
+
+        @media only screen and (max-width: 991.98px) {
+            column-gap: 90px;
+            row-gap: 70px;
+        }
+        @media only screen and (max-width: 424.98px) {
+            flex-direction: column;
+            justify-content: flex-start;
+            row-gap: 20px;
+        }
+    }
+    // .activity__item
+    &__item {
+        flex: 0 1 auto;
+
+        @media only screen and (max-width: 424.98px) {
+            flex-grow: 1;
+        }
+    }
+    // .activity__link
+    &__link {
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        letter-spacing: 0.0625rem;
+
+        border-bottom: 1px solid $accent-color;
+        padding-bottom: 0.5rem;
+        transition:
+            border 150ms ease-in,
+            color 150ms ease-in;
+
+        @media only screen and (max-width: 424.98px) {
+            font-size: 1rem;
+        }
+
+        &:hover {
+            @media (any-hover: hover) {
+                border-bottom: 1px solid $color-text-primary;
+                color: $accent-color;
+            }
+        }
+    }
+}
+
+.item-activity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+
+    @media only screen and (max-width: 424.98px) {
+        flex-direction: row;
+        column-gap: 20px;
+    }
+
+    &__icon {
+        flex-grow: 1;
+        @media only screen and (max-width: 424.98px) {
+            flex-grow: 0;
+        }
+    }
+
+    // .item-activity__label
+    &__label {
+        font-size: 20px;
+        letter-spacing: 1px;
+
+        @media only screen and (max-width: 767.98px) {
+            font-size: 16px;
+        }
+        @media only screen and (max-width: 424.98px) {
+            font-size: 12px;
+        }
+    }
+}
