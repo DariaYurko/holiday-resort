@@ -14,8 +14,13 @@ body {
     flex-grow: 1;
 }
 
-[class*="page__"] {
+[class*="page__"],
+.footer {
     padding-block: 4rem;
+    
+    @media screen and (max-width: 767.98px) {
+        padding-block: 2rem;
+    }
 
     &:nth-child(even) {
         background-color: $color-bg-lighter;
@@ -25,7 +30,4 @@ body {
         background-color: $color-bg-darker;
     }
 
-    @media screen and (max-width: 767.98px) {
-        padding-block: 2rem;
-    }
 }
