@@ -679,6 +679,9 @@ body {
     row-gap: 2rem;
   }
 }
+.footer__contacts a:hover {
+  text-decoration: underline;
+}
 .privacy-footer {
   text-align: center;
 }

@@ -3,60 +3,63 @@
 *
 *--------- Сonnecting FOOTER styles --------*/
 .footer {
-  letter-spacing: 0.8px;
-  text-align: center;
+    letter-spacing: 0.8px;
+    text-align: center;
 
-  // .footer__container
-  &__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 4rem;
+    // .footer__container
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 4rem;
 
-    @media only screen and (max-width: 768.98px) {
-      row-gap: 3rem;
+        @media only screen and (max-width: 768.98px) {
+            row-gap: 3rem;
+        }
+
+        @media only screen and (max-width: 424.98px) {
+            row-gap: 2rem;
+        }
     }
-
-    @media only screen and (max-width: 424.98px) {
-      row-gap: 2rem;
+    // .footer__logo
+    &__logo {
     }
-  }
-  // .footer__logo
-  &__logo {
-  }
-  // .footer__social
-  &__social {
-  }
-  // .footer__contacts
-  &__contacts {
-  }
-  // .footer__privacy
-  &__privacy {
-  }
+    // .footer__social
+    &__social {
+    }
+    // .footer__contacts
+    &__contacts a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    // .footer__privacy
+    &__privacy {
+    }
 }
 
 .privacy-footer {
-  text-align: center;
+    text-align: center;
 
-  // .privacy-footer__copy
-  &__copy:not(:last-child) {
-    margin-bottom: 16px;
+    // .privacy-footer__copy
+    &__copy:not(:last-child) {
+        margin-bottom: 16px;
 
-    @media only screen and (max-width: 768.98px) {
-      margin-bottom: 8px;
+        @media only screen and (max-width: 768.98px) {
+            margin-bottom: 8px;
+        }
     }
-  }
 
-  // .privacy-footer__website
-  &__website {
-  }
-  
-  // .privacy-footer__link
-  &__link {
-    font-weight: 600;
-
-    &:hover {
-      text-decoration: underline;
+    // .privacy-footer__website
+    &__website {
     }
-  }
+
+    // .privacy-footer__link
+    &__link {
+        font-weight: 600;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
