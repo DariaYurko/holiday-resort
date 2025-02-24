@@ -35,11 +35,30 @@ body {
 
 .wrapper {
   min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   overflow: hidden;
+}
+
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 [class*=page__] {
   padding-block: 4rem;
+}
+[class*=page__]:nth-child(even) {
+  background-color: #ffffff;
+}
+[class*=page__]:nth-child(odd) {
+  background-color: #f4f4f4;
 }
 @media screen and (max-width: 767.98px) {
   [class*=page__] {
@@ -106,6 +125,28 @@ body {
   }
 }
 
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 32px;
+}
+.social__link {
+  -webkit-transition: -webkit-transform 150ms ease-in;
+  transition: -webkit-transform 150ms ease-in;
+  transition: transform 150ms ease-in;
+  transition: transform 150ms ease-in, -webkit-transform 150ms ease-in;
+}
+.social__link:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
 .page__hero {
   padding-block: 7.76699svh; /* 64/824 */
 }
@@ -202,24 +243,6 @@ body {
           align-items: center;
   row-gap: 3.883495svh; /* 32/824 */
 }
-.menu__logo {
-  -webkit-transition: -webkit-transform 150ms ease-in;
-  transition: -webkit-transform 150ms ease-in;
-  transition: transform 150ms ease-in;
-  transition: transform 150ms ease-in, -webkit-transform 150ms ease-in;
-}
-.menu__logo:hover {
-  -webkit-transform: scale(1.05);
-      -ms-transform: scale(1.05);
-          transform: scale(1.05);
-}
-@media only screen and (max-width: 767.98px) {
-  .menu__logo {
-    -webkit-transform: scale(0.7);
-        -ms-transform: scale(0.7);
-            transform: scale(0.7);
-  }
-}
 .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -248,6 +271,24 @@ body {
   }
 }
 
+.logo {
+  -webkit-transition: -webkit-transform 150ms ease-in;
+  transition: -webkit-transform 150ms ease-in;
+  transition: transform 150ms ease-in;
+  transition: transform 150ms ease-in, -webkit-transform 150ms ease-in;
+}
+.logo:hover {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+@media only screen and (max-width: 767.98px) {
+  .logo {
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
 .about {
   text-align: center;
 }
@@ -546,10 +587,64 @@ body {
   }
 }
 
+.contacts__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 4rem;
+}
+@media only screen and (max-width: 768.98px) {
+  .contacts__container {
+    row-gap: 3rem;
+  }
+}
+@media only screen and (max-width: 424.98px) {
+  .contacts__container {
+    row-gap: 2rem;
+  }
+}
+.contacts__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 32px;
+}
+.contacts__link {
+  letter-spacing: 0.8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 16px;
+     -moz-column-gap: 16px;
+          column-gap: 16px;
+}
+.contacts__link:hover {
+  text-decoration: underline;
+}
+.contacts__link--phone::before {
+  content: url(../img/icons/contacts/phone.svg);
+}
+.contacts__link--mail::before {
+  content: url(../img/icons/contacts/mail.svg);
+}
+.contacts__link--map::before {
+  content: url(../img/icons/contacts/map.svg);
+}
 /**
 *
 *
 *--------- Сonnecting FOOTER styles --------*/
-.footer {
-  background-color: #d8ae5e;
-}
