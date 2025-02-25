@@ -690,6 +690,11 @@ body {
 .footer__contacts a:hover {
   text-decoration: underline;
 }
+@media screen and (max-width: 767px) {
+  .contacts-footer__link {
+    line-height: 2;
+  }
+}
 .privacy-footer {
   text-align: center;
 }
