@@ -141,15 +141,17 @@ body {
   gap: 32px;
 }
 .social__link {
-  -webkit-transition: -webkit-transform 150ms ease-in;
-  transition: -webkit-transform 150ms ease-in;
-  transition: transform 150ms ease-in;
-  transition: transform 150ms ease-in, -webkit-transform 150ms ease-in;
+  fill: #d8ae5e;
+  -webkit-transition: fill 150ms ease-in, -webkit-transform 150ms ease-in;
+  transition: fill 150ms ease-in, -webkit-transform 150ms ease-in;
+  transition: transform 150ms ease-in, fill 150ms ease-in;
+  transition: transform 150ms ease-in, fill 150ms ease-in, -webkit-transform 150ms ease-in;
 }
 .social__link:hover {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
+  fill: #a18146;
 }
 .page__hero {
   padding-block: 7.76699svh; /* 64/824 */
@@ -638,6 +640,12 @@ body {
 }
 .contacts__link:hover {
   text-decoration: underline;
+}
+.contacts__link::before {
+  width: 24px;
+  height: 24px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 .contacts__link--phone::before {
   content: url(../img/icons/contacts/phone.svg);

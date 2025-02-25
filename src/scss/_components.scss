@@ -11,7 +11,7 @@
 
     &:hover {
         @media (any-hover: hover) {
-            background-color: #a18146;
+            background-color: $hover-color;
         }
     }
 }
@@ -69,14 +69,20 @@
     // .social__item
     &__item {
     }
+
     // .social__link
     &__link {
-        transition: transform 150ms ease-in;
+        fill: $accent-color;
+        transition:
+            transform 150ms ease-in,
+            fill 150ms ease-in;
 
         &:hover {
             transform: scale(1.1);
+            fill: $hover-color;
         }
     }
+
     // .social__icon
     &__icon {
     }

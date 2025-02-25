@@ -41,6 +41,12 @@
         &:hover {
             text-decoration: underline;
         }
+
+        &::before {
+            width: 24px;
+            height: 24px;
+            align-self: flex-start;
+        }
     }
     // .contacts__link--phone
     &__link--phone {
