@@ -3,6 +3,7 @@
     &__contacts {
     }
 }
+
 .contacts {
     // .contacts__container
     &__container {
@@ -20,6 +21,13 @@
     }
     // .contacts__header
     &__header {
+        .header-block__title{
+            margin-bottom: 20px;
+        }
+
+        &::after {
+            margin-top: 20px;
+        }
     }
     // .contacts__list
     &__list {

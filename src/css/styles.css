@@ -5,6 +5,9 @@
   | default @import url()
   |============================
 */
+/*
+* 
+* --------- Сonnecting fonts ----------------- */
 @import url("/css/reset.css");
 @import url("/css/container.css");
 @font-face {
@@ -28,6 +31,9 @@
   font-style: normal;
   font-display: swap;
 }
+/*
+* 
+* --------- Сonnecting reset styles ---------- */
 body {
   font-family: "Source Sans Pro", sans-serif;
   line-height: 1.25rem;
@@ -444,12 +450,15 @@ body {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  width: 78px;
+  height: 64px;
 }
 @media only screen and (max-width: 424.98px) {
   .item-activity__icon {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
+    width: 50px;
   }
 }
 .item-activity__label {
@@ -612,6 +621,12 @@ body {
   .contacts__container {
     row-gap: 2rem;
   }
+}
+.contacts__header .header-block__title {
+  margin-bottom: 20px;
+}
+.contacts__header::after {
+  margin-top: 20px;
 }
 .contacts__list {
   display: -webkit-box;

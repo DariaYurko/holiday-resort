@@ -6,12 +6,16 @@
 */
 
 
-// --------- Сonnecting fonts ------------------
+/*
+* 
+* --------- Сonnecting fonts ----------------- */
 @import './fonts';
 
 // --------- Сonnecting variables --------------
 @import "./variables.scss";
-
+/*
+* 
+* --------- Сonnecting reset styles ---------- */
 @import url("/css/reset.css");
 @import url("/css/container.css");
 @import './base';
